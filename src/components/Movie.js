@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Movie = ({ movie }) => {
-    if(movie.Poster != "N/A") {
+    if(movie.Poster !== "N/A") {
         return(
             <div className="movie">
                 <img src={ movie.Poster } alt={ 'Poster for: ' + movie.Title }/>        

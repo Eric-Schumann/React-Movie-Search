@@ -4,10 +4,10 @@ class MovieSearchForm extends Component {
 
     search(e) {
         e.preventDefault();
-        let searchTerm = e.target.title.value;
-        e.target.title.value = '';
-        e.target.title.focus();
-        this.props.updateList(searchTerm);
+        let query = this.refs.query;
+        this.props.updateList(query.value);        
+        query.value = '';
+        query.focus();
     }
 
     render() {
@@ -16,7 +16,7 @@ class MovieSearchForm extends Component {
                 onSubmit={(e) => { this.search(e); }} 
                 autocomplete="off"
             >
-                <input name="title" type="text" />
+                <input ref="query" type="text" />
                 <button type="submit">Search</button>
             </form>
         )
