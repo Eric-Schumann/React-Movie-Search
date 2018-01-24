@@ -8,6 +8,7 @@
   border: 1px solid black;
   border-radius: 5px;
   padding: 25px;
+  background: linear-gradient(black, blue, lightskyblue);
 }
 
 input {
@@ -30,10 +31,13 @@ button {
 }
 
 .movie {
+  flex: 1;
+  flex-basis: 30%;
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
+  background: linear-gradient(black, blue, lightskyblue);
 }
 
 .movie img {
@@ -41,15 +45,16 @@ button {
   height: 300px;
 }
 
+.title {
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
 @media (min-width: 900px) {
   #movie-container {
     display: flex;
     flex-wrap: wrap;     
     justify-content: space-between
-  }
-
-  .movie {
-    flex: 1;
-    flex-basis: 30%;
   }
 }

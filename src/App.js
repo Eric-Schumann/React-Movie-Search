@@ -25,13 +25,21 @@ class App extends Component {
     })
   }
 
+  alertMovie(index) {
+    let movieList = this.state.movies;
+    let movie = movieList[index];
+    alert(`Title: ${ movie.Title }\nYear: ${ movie.Year }`);
+  }
+
   render() {
     return (
       <div className="App">
-        <h1 className="title">React Movie Search</h1>
+        <h1>React Movie Search</h1>
         <MovieSearchForm updateList={ this.updateList.bind(this) }/>
         <div className="container">
-          <MovieListContainer movies={ this.state.movies } />
+          <MovieListContainer movies={ this.state.movies } 
+            alertMovie={ this.alertMovie.bind(this) }
+          />
         </div>
       </div>
     );
